@@ -62,10 +62,12 @@ colors/matrix.lua         default theme (no plugin)
 
 **Toggles** — `<leader>ut` treesitter context · `<leader>uh` inlay hints · `:FormatToggle[!]`
 
+**Terminal** — `<leader>tt` or `<C-\>` toggle floating terminal · `<Esc><Esc>` exit terminal mode.
+Built-in (no plugin); the shell session persists across toggles.
+
 ## Adding things later
 
 - **JS/TS debugging**: add `mxsdev/nvim-dap-vscode-js` + `js-debug-adapter` (Mason) to `lua/plugins/dap.lua`.
 - **Richer Rust**: swap `rust_analyzer` config for `mrcjkb/rustaceanvim` + `saecki/crates.nvim`.
 - **Different theme**: `tokyonight` is installed; `:colorscheme tokyonight` or edit the schedule in `init.lua`.
 - **A sidebar tree** (if oil isn't enough): `nvim-neo-tree/neo-tree.nvim`.
-</content>

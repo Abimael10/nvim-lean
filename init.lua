@@ -9,6 +9,7 @@ vim.g.have_nerd_font = true
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
+require("config.terminal")
 require("config.lazy")
 
 -- Apply theme after plugins are available (matrix is a colors/ file, no plugin).
