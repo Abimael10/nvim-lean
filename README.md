@@ -57,9 +57,6 @@ colors/matrix.lua         default theme (no plugin)
 
 **Files** — `-` or `<leader>e` open oil (edit dir as buffer)
 
-**Debug** — `<leader>db` breakpoint · `<leader>dc` continue · `<leader>di/do/dO` step
-· `<leader>du` UI · `<leader>de` eval (fully lazy — loads on first use)
-
 **Toggles** — `<leader>ut` treesitter context · `<leader>uh` inlay hints · `:FormatToggle[!]`
 
 **Terminal** — `<leader>tt` or `<C-\>` toggle floating terminal · `<Esc><Esc>` exit terminal mode.
@@ -71,7 +68,9 @@ restarts. First run defaults to `ember`.
 
 ## Adding things later
 
-- **JS/TS debugging**: add `mxsdev/nvim-dap-vscode-js` + `js-debug-adapter` (Mason) to `lua/plugins/dap.lua`.
+- **Debugging (DAP)**: intentionally not included. If added later, do it in its own
+  `lua/plugins/dap.lua`. Odoo/Python debugging works best by attaching to a running
+  server started under `debugpy --listen`, not by launching model files directly.
 - **Richer Rust**: swap `rust_analyzer` config for `mrcjkb/rustaceanvim` + `saecki/crates.nvim`.
 - **More themes**: install any theme plugin, add it to the tokyonight-style load hint in
   `lua/config/colorscheme.lua`, then pick it via `<leader>uc`. New `colors/*.lua` files

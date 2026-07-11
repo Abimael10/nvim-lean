@@ -35,7 +35,6 @@ return {
         { "<leader>u", group = "toggle/ui" },
         { "<leader>t", group = "terminal" },
         { "<leader>b", group = "buffer" },
-        { "<leader>d", group = "debug" },
         { "<leader>e", group = "explorer" },
       },
     },
