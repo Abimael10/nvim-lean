@@ -12,7 +12,8 @@ require("config.autocmds")
 require("config.terminal")
 require("config.lazy")
 
--- Apply theme after plugins are available (matrix is a colors/ file, no plugin).
-vim.schedule(function()
-  pcall(vim.cmd.colorscheme, "matrix")
-end)
+-- Theme switcher (<leader>uc, live preview) + persistence. Applies the last-used
+-- colorscheme; first run defaults to `ember`. Alternatives: matrix, tokyonight*.
+local colorscheme = require("config.colorscheme")
+colorscheme.setup()
+vim.schedule(colorscheme.apply)

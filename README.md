@@ -65,9 +65,15 @@ colors/matrix.lua         default theme (no plugin)
 **Terminal** — `<leader>tt` or `<C-\>` toggle floating terminal · `<Esc><Esc>` exit terminal mode.
 Built-in (no plugin); the shell session persists across toggles.
 
+**Themes** — `<leader>uc` pick a colorscheme with live preview. Bundled: `ember` (warm
+orange/amber), `matrix` (green), plus `tokyonight*` variants. Your choice persists across
+restarts. First run defaults to `ember`.
+
 ## Adding things later
 
 - **JS/TS debugging**: add `mxsdev/nvim-dap-vscode-js` + `js-debug-adapter` (Mason) to `lua/plugins/dap.lua`.
 - **Richer Rust**: swap `rust_analyzer` config for `mrcjkb/rustaceanvim` + `saecki/crates.nvim`.
-- **Different theme**: `tokyonight` is installed; `:colorscheme tokyonight` or edit the schedule in `init.lua`.
+- **More themes**: install any theme plugin, add it to the tokyonight-style load hint in
+  `lua/config/colorscheme.lua`, then pick it via `<leader>uc`. New `colors/*.lua` files
+  (like `ember`/`matrix`) show up automatically.
 - **A sidebar tree** (if oil isn't enough): `nvim-neo-tree/neo-tree.nvim`.
